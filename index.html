@@ -6,13 +6,25 @@
     <title>RPGText</title>
     <style>
         h1,p, li{
-            color: #eb9920
+            color: #eb9920;
         }
         div{
-            background-color: black
+            background-color: black;
         }
         #campanha{
-            background-color: rgb(37, 37, 37)
+            background-color: rgb(37, 37, 37);
+        }
+        table, td, th{
+            border: 1px solid white;
+            border-collapse: collapse;
+            color: white;
+            border-width: 20px;
+        }
+        #dano:hover{
+            color: red
+        }
+        #vida:hover{
+            color: green
         }
     </style>
 </head>
@@ -22,7 +34,7 @@
 <body>
     <div id="classes">
         <h4>
-            Descrição das classes4
+            Descrição das classes
         </h4>
         <ul>
             <li>O Bárbaro é um Tank pronto para a batalha, resiste bem aos danos. Quando bonificado recebe o dobro de vida e metade do dano.</li>
@@ -30,7 +42,41 @@
             <li>A Maga usa sua inteligência para lançar poderosos feitiços. Forte contra inimigos do tipo físico, mas fraca contra elementais.</li>
             <li>O Assassino é furtivo e letal, atacando seus inimigos de surpresa. Quando derrota um inimigo ganha mais dano, mas não ganha vida.</li>
             <li>A curandeira é leal e gentil, trata das feridas e cura venenos. Quando bonificada, sua cura é aumentada.</li> 
-        </ul>    
+        </ul>
+        <table>
+            
+            <tr>
+                <th rowspan="6">Atributos</th>
+                <th>Nome</th>
+                <th id="dano">Dano</th>
+                <th id="vida">Vida </th>
+            </tr>
+            <tr>
+                <td>Bárbaro</td>
+                <td id="dano">15</td>
+                <td id="vida">1000</td>
+            </tr>
+            <tr>
+                <td>Caçadora</td>
+                <td id="dano">20</td>
+                <td id="vida">600</td>
+            </tr>
+            <tr>
+                <td>Maga</td>
+                <td id="dano">25</td>
+                <td id="vida">400</td>
+            </tr>
+            <tr>
+                <td>Assassina</td>
+                <td id="dano">30</td>
+                <td id="vida">200</td>
+            </tr>
+            <tr>
+                <td>Xamã</td>
+                <td id="dano">12</td>
+                <td id="vida">800</td>
+            </tr>
+        </table> 
     </div>
     <div id="inimigos">
         <h4>
