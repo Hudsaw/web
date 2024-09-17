@@ -11,16 +11,22 @@
     Portal do jogo de RPG de Texto
 </h1>
 <body>
-    <div class="secao">
-        <p> Bem-vindo ao início da aventura! <br> Neste jogo você irá explorar e combater pelos seus ideais.</p>
 
-    </div>
+    <div class="secao">
+       
+        <!-- Áudio com controle automático -->
+        <audio id="backgroundAudio" autoplay loop>
+            <source src="assets/sounds/caverna.mp3" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
         
+        <p> Bem-vindo ao início da aventura! <br> Neste jogo você irá explorar e combater pelos seus ideais.</p>
 
     <div class="secao">
         <h2>Modos de Jogo</h2>
         <table>           
             <tr>
+                <td rowspan="4"><img src="assets/img/home.png" class="foto"></td>
                 <td><h4>Aleatório: </h4></td>
                 <td><p>Neste modo a equipe entra no jogo para concluir as explorações e os confrontos decidindo e a trilha pelo rolar dos dados. Baixe o arquivo ao lado e escreva a sua própria campanha</p></td>
                 <td class="invert">
