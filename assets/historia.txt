@@ -1,0 +1,21 @@
+titulo: "Revolução para a Liberdade
+resumo: "Esta equipe movida por um desejo ardente de mudança e justiça, realiza aventuras de exploração e conflitos com garra e determinação.\n Eles enfrentam inúmeras missões para proteger e melhorar a vida dos mais vulneráveis, ao desafiar as forças da opressão que tentam manter o povo alienado aos seus interesses.\nO destino do povoado está nas mãos destes aventureiros, enquanto eles se preparam para enfrentar novos desafios.\n
+1.expl: "Missão da Agricultura Sustentável:\nEscolha entre as três rotas a sua forma para ensinar técnicas agrícolas eficientes e sustentáveis para aumentar a produção de alimentos e melhorar a segurança alimentar da comunidade.
+2.expl: "Missão da Construção de Moradias:\nEscolha entre as três rotas a sua forma para auxiliar na construção de habitações seguras e confortáveis para os habitantes, utilizando materiais locais e técnicas tradicionais.
+3.conf: "Soberano Expeculador:\nUm soberano soltou uma criatura nas terras agrícolas de uma comunidade para destruir tudo e expulsar os aldeões. A equipe precisa derrotar a criatura para garantir a segurança do povoado.
+4.expl: "Missão da Educação Popular:\nOrganize aulas para alfabetizar os habitantes e ensinar conceitos de cidadania e direitos humanos, capacitando a comunidade a lutar por seus direitos.
+5.expl: "Missão da Saúde Comunitária:\nMonte postos de saúde e distribua medicamentos essenciais, além de ensinar práticas de higiene e primeiros socorros para melhorar a saúde da população.
+6.conf: "Guarda do Soberano:\nOs guardas do soberano, ao perceberem a organização da comunidade, decidem atacar para retomar o controle. A equipe deve enfrentá-los e proteger os aldeões.
+7.expl: "Missão da Arte e Cultura:\nPromova eventos culturais e artísticos que valorizem a identidade da comunidade, resgatando tradições e fortalecendo o senso de união e pertencimento.
+8.expl: "Missão da Cooperação Econômica:\nCrie cooperativas de produção e comércio, incentivando a economia local e garantindo uma distribuição mais justa dos recursos.
+9.conf: "Mercenários do Soberano:\nO soberano contrata mercenários para semear o caos na comunidade. A equipe deve enfrentar esses mercenários para garantir a segurança e a paz na região.
+10.expl: "Missão da Infraestrutura:\nConstrua e repare estradas, pontes e sistemas de saneamento básico, melhorando a qualidade de vida e facilitando a comunicação e o transporte na região.
+11.expl: "Missão da Justiça Social:\nCrie um conselho comunitário para resolver conflitos e garantir que as decisões sejam tomadas de forma justa e participativa, assegurando a igualdade de direitos para todos.
+12.conf: "Último Desafio do Soberano:\nEm um ato desesperado, o soberano ataca com suas forças restantes. A equipe deve enfrentar este último desafio para garantir a liberdade e a justiça para todos.
+derrota: "Apesar de seus esforços a equipe não conseguiu superar o poder soberano e extinguir as ameaças aos aldeões. Contamos com você em uma próxima reencarnação!
+fim: "Com coragem inabalável e determinação incansável, os aventureiros triunfaram sobre todas as adversidades, cumprindo cada missão com bravura e compaixão. O povoado, outrora mergulhado na miséria e na desesperança, agora testemunha um novo amanhecer de prosperidade e igualdade.\nGraças aos esforços dos heróis, as sementes da mudança foram plantadas e floresceram em uma nova sociedade baseada na solidariedade e no respeito mútuo. Os aventureiros não apenas enfrentaram inimigos temíveis, mas também inspiraram todos ao seu redor a lutar por um futuro melhor.\nEnquanto o povoado se prepara para abraçar uma era de progresso e igualdade, os heróis partem, sabendo que deixam para trás um legado de coragem e esperança. Sua jornada pode ter chegado ao fim, mas seu impacto perdurará para sempre, lembrado como os salvadores que trouxeram a luz à escuridão e a esperança à desolação.
+resExpBom: "Concluir essa missão melhorou os status e moral do grupo
+resExpMau: "Sem desanimar, mas perdemos perto de 20% de nossa vida
+random: "False
+hist_range: "12
+
