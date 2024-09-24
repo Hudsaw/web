@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Cadastro</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+
+    <header>
+        <div class="secao">
+            <table>
+            <tr>
+                <td><a href="#form">Cadastro</a></td>
+            </tr>
+            </table>
+        </div>
+    </header>
+
+	<body>
+        <div class="secao">
+            <section id="form">
+                <h1>Cadastro</h1>
+                <form action="" method="GET">
+                    <label for="nome">Nome</label>
+                    <input id="nome" type="text">  
+                    <br>
+                    <label for="mail">e-mail</label>
+                    <input id="mail" type="text" name="mail" required> 
+                    <br>
+                    <label for="estado">Selecione Estado:</label>
+                    <select id="estado" name="estado">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="EX">Estrangeiro</option>
+                    </select>
+                    <br>
+                    <label for="login">Login</label>
+                    <input id="login" type="text"> 
+                    <br>
+                    <label for="pass">Senha</label>
+                    <input id="pass" type="password"> 
+                    <bre>
+                    <label for="pass">Confirmar Senha</label>
+                    <input id="pass" type="password"> 
+                    <br>
+                    <fieldset>
+                        <legend>Gênero:</legend>
+                        <div>
+                          <input type="radio" id="masc" name="genero" value="Masculino" checked />
+                          <label for="masc">Masculino</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="fem" name="genero" value="Feminino" />
+                            <label for="fem">Feminino</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="other" name="genero" value="Outros" />
+                            <label for="other">Outros</label>
+                        </div>
+                      </fieldset>
+                    <br>
+                    <label for="check">Aceito os termos</label>
+                    <input type="checkbox">
+                    <br>
+                    <input type="submit" value="Enviar" size="40" maxlength="50">
+                </form>
+            </section>
+        </div>
+    </body>
+    <footer>
+        <div class="secao">
+            <h2>
+                <table>
+                    <tr>
+                        <td class="icon"><a href="http://bit.ly/hudsawlkd" target="_blank">
+                            <img src="assets/icons/001-linkedin.png"></a></td>    
+                        <td class="icon"><a href="http://github.com/Hudsaw" target="_blank">
+                            <img src="assets/icons/002-github.png"></a></td>
+                        <td class="icon"><a href="https://wa.me/5547997907819?text=Olá,%20vi%20seu%20currículo,%20podemos%20conversar?" target="_blank">
+                            <img src="assets/icons/003-whatsup.png"></a></td>
+                        <td class="icon"><a href="mailto:hudsonrb@gmail.com" target="_blank">
+                            <img src="assets/icons/004-email.png"></a></td>
+                        <td class="icon"><a href="curriculo.html" target="_blank">
+                            <img src="assets/icons/005-resume.png"></a></td>
+                    </tr>                    
+                </table>
+            </h2>
+        </div>
+    </footer>
+</html>

@@ -53,10 +53,15 @@ h3 {
     font-size: 20px;
 }
 
-h4 {
+h4, label {
     color: #FFC107;
     font-weight: 500;
     font-size: 16px;
+    text-align: center
+}
+
+input, select {
+    background-color: #FFC107;
     text-align: center
 }
 
