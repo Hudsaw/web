@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../style.css">
+		<title>Exercício 10</title>
+        <style>
+            body{
+                display: flex;
+            }
+
+            .grid {
+            display: grid;
+            grid-template-columns: repeat(5, 100px);
+            gap: 10px;
+            }
+
+            .span{
+                background-color: #fff;
+                color: #000000;
+                border: 2px solid #aaa;
+                border-radius: 50%;
+                height: 60px;
+                width: 60px;
+                font-size: 24px;
+            }
+
+            #id1 .span:nth-child(1) { background-color: #ff0000; }
+            #id2 .span:nth-child(6) { background-color: #00ff00; }
+            #id3 .span:nth-child(2) { background-color: #00ffff; }
+            #id4 .span:nth-child(5) { background-color: #ee55ee; }
+            #id5 .span:nth-child(1) { background-color: #cccc00; }
+            #id5 .span:nth-child(3) { background-color: #cccc00; }
+            #id5 .span:nth-child(5) { background-color: #cccc00; }
+            
+
+        </style>
+	</head>
+
+	<body>
+        <div class="secao">
+            <h4>Crie o css para que fiquem com visual ilustrado</h4>
+            <div class="grid">
+                <div id="id1"><span class="span">1</span><span class="span">2</span><span class="span">3</span><span class="span">4</span><span class="span">5</span><span class="span">6</span></div>
+                <div id="id2"><span class="span">1</span><span class="span">2</span><span class="span">3</span><span class="span">4</span><span class="span">5</span><span class="span">6</span></div>
+                <div id="id3"><span class="span">1</span><span class="span">2</span><span class="span">3</span><span class="span">4</span><span class="span">5</span><span class="span">6</span></div>
+                <div id="id4"><span class="span">1</span><span class="span">2</span><span class="span">3</span><span class="span">4</span><span class="span">5</span><span class="span">6</span></div>
+                <div id="id5"><span class="span">1</span><span class="span">2</span><span class="span">3</span><span class="span">4</span><span class="span">5</span><span class="span">6</span></div>
+                <div id="id6"><span class="span">1</span><span class="span">2</span><span class="span">3</span><span class="span">4</span><span class="span">5</span><span class="span">6</span></div>
+                <div id="id7"><span class="span">1</span><span class="span">2</span><span class="span">3</span><span class="span">4</span><span class="span">5</span><span class="span">6</span></div>
+                <div id="id8"><span class="span">1</span><span class="span">2</span><span class="span">3</span><span class="span">4</span><span class="span">5</span><span class="span">6</span></div>
+                <div id="id9"><span class="span">1</span><span class="span">2</span><span class="span">3</span><span class="span">4</span><span class="span">5</span><span class="span">6</span></div>
+                <div id="id10"><span class="span">1</span><span class="span">2</span><span class="span">3</span><span class="span">4</span><span class="span">5</span><span class="span">6</span></div>
+            </div>
+        </div>
+    </body>
+    
