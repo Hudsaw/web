@@ -18,14 +18,21 @@
 
             .box1{
                 height: 20vh;
-                width: 23.47vw;
+                width: 23vw;
                 display: inline-block;
             }
 
             .box2{
                 height: 20vh;
-                width: 23.47vw;
-                display: inline-block;
+                width: 23.0vw;
+                position:absolute;
+            }
+
+            .container{
+                position: relative;
+                height: 90vh;
+                width: 90vw;
+
             }
 
             #box1{
@@ -42,18 +49,30 @@
             }
             #box5{
                 background-color: #d607ff;
-                
+                right:50%;
+                top:50%;
             }
             #box6{
                 background-color: #008000;
-                position: relative;
-
+                right:0px;
+                bottom:0px;
+                
             }
             #box7{
                 background-color: #ff0000;
+                top:0px;
+                left:0px;
+
             }
             #box8{
                 background-color: #ffff00;
+                top:0px;
+                right:0px;
+            }
+            #box9{
+                background-color: #0000ff;
+                bottom:0px;
+                left:0px;
             }
         </style>
 	</head>
@@ -66,8 +85,10 @@
                 <div class="box" id="box1">1</div><div class="box" id="box2">2</div><div class="box" id="box3">3</div><div class="box" id="box4">4</div>
                 <p>display: inline-block;</p>
                 <div class="box1" id="box1">1</div><div class="box1" id="box2">2</div><div class="box1" id="box3">3</div><div class="box1" id="box4">4</div>
-                <p>sem ideia</p>
-                <div class="box2" id="box1">5</div><div class="box2" id="box2">6</div><div class="box2" id="box3">7</div><div class="box2" id="box4">8</div>
+                <p>flexbox</p>
+                <div class="container">
+                <div class="box2" id="box5">5</div><div class="box2" id="box6">6</div><div class="box2" id="box7">7</div><div class="box2" id="box8">8</div><div class="box2" id="box9">9</div>
+                </div>
             </section>
         </div>
     </body>
