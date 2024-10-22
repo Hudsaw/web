@@ -3,17 +3,15 @@
 	<head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Hudsaw's Page</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Lista de Exercício 2</title>
+		<link rel="stylesheet" type="text/css" href="../style.css">
 	</head>
 
     <header>
         <div class="secao">
             <table>
             <tr>
-                <td><a href="/lista/lista.html">Lista 1</a></td>
-                <td><a href="/lista2/lista.html">Lista 2</a></td>
-                <td><a href="/lista3/lista.html">Lista 3</a></td>
+                
             </tr>
             </table>
         </div>
@@ -21,9 +19,18 @@
 
 	<body>
         <div class="secao">
-            <section id="lista1"></section>
-            <section id="lista2"></section>
-            <section id="lista3"></section>
+            <section id="lista2">
+                <h1>Lista de Exercícios 3</h1>
+            <button onclick="abrirPagina('/lista3/01.html')">(2)</button>
+    
+    <iframe id="conteudo" src=""></iframe>
+
+    <script>
+        function abrirPagina(pagina) {
+            document.getElementById('conteudo').src = pagina;
+        }
+    </script>
+            </section>
         </div>
     </body>
     <footer>
@@ -32,15 +39,15 @@
                 <table>
                     <tr>
                         <td class="icon"><a href="http://bit.ly/hudsawlkd" target="_blank">
-                            <img src="assets/icons/001-linkedin.png"></a></td>    
+                            <img src="../assets/icons/001-linkedin.png"></a></td>    
                         <td class="icon"><a href="http://github.com/Hudsaw" target="_blank">
-                            <img src="assets/icons/002-github.png"></a></td>
+                            <img src="../assets/icons/002-github.png"></a></td>
                         <td class="icon"><a href="https://wa.me/5547997907819?text=Olá,%20vi%20seu%20currículo,%20podemos%20conversar?" target="_blank">
-                            <img src="assets/icons/003-whatsup.png"></a></td>
+                            <img src="../assets/icons/003-whatsup.png"></a></td>
                         <td class="icon"><a href="mailto:hudsonrb@gmail.com" target="_blank">
-                            <img src="assets/icons/004-email.png"></a></td>
+                            <img src="../assets/icons/004-email.png"></a></td>
                         <td class="icon"><a href="curriculo.html" target="_blank">
-                            <img src="assets/icons/005-resume.png"></a></td>
+                            <img src="../assets/icons/005-resume.png"></a></td>
                     </tr>                    
                 </table>
             </h2>

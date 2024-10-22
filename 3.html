@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../style.css">
+		<title>Aula Grid</title>
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+
+            body{
+                padding: 0px;
+            }
+
+            .secao{
+                margin: 0px;
+                padding: 0px;
+                
+            }
+            
+            .container{
+                display: grid;
+                grid-template-areas:
+                "header header  header"
+                "nav    cabeca  cabeca"
+                "nav    main    main"
+                "nav    rodape  rodape";
+                .header{grid-area: header;}
+                .navegacao{grid-area: nav;}
+                .cabeca{grid-area: cabeca;}
+                .main{grid-area: main;}
+                .rodape{grid-area: rodape;}
+                grid-template-rows: 20vh 15vh 50vh 15vh;
+            }
+
+            .header {
+                background-color: #2d2d3a;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+            }
+
+            span{
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                margin: 10px;
+                background-color: #fff;
+                border-radius: 50%;
+            }
+    
+            .nav{
+                background-color: #20202a;
+                padding: 10px;
+            }
+
+            .cabeca{
+                background-color: #FFC107;
+                padding: 10px;
+            }
+
+            .main{
+                background-color: #2d2d3a;
+                padding: 10px;
+            }
+
+            .rodape{
+                background-color: #FFC107;
+                padding: 10px;
+            }
+
+        </style>
+	</head>
+
+	<body>
+        <div class="container">
+            <div class="header"><span></span><span></span><span></span><br>Header</div>
+            <div class="navegacao">nav</div>
+            <div class="cabeca">cabeça</div>
+            <div class="main">main</div>
+            <div class="rodape">rodape</div>
+        </div>
+    </body>
+    
