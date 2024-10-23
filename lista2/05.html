@@ -21,20 +21,23 @@
                 width: 100vw;
                 padding: 20px;
                 border-radius: 10px;
+                border: #000 solid 1px;
                 display: flex;
-                align-items: flex-end;   
                 flex-direction: row; 
             }
 
             .chat {
+                height: 55vh;
                 background-color: #20202a;
                 margin: 10px;
                 padding: 10px;
                 border-radius: 10px;
-                max-width: 200px;
-
+                display: flex;
+                align-items: flex-end;
             }
             
+            .chat:nth-of-type(2) {flex-basis:80vw;}
+                       
             .avatar {
                 width: 50px;
                 height: 50px;
@@ -45,13 +48,18 @@
         </style>
     </head>
     <body>
-        <div class="chat-container">
-            <div class="chat">
+        <div class="chat-container" >
+            <div class="chat" style="background-image: url('../assets/img/11.png')">
                 <img src="../assets/img/11.png" class="avatar">
             </div>
 
             <div class="chat">
                 <img src="../assets/img/12.png" class="avatar">
+                <img src="../assets/img/12.png" width="90%", height="90%">
+                <div class="msg">
+                    <h3>Caçadora</h3>
+                    <p>Atiradora com 20 de dano e 600 de Vida</p>                    
+                </div>
             </div>
 
             <div class="chat">
