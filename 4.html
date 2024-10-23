@@ -20,29 +20,26 @@
                 padding: 0px;
                 
             }
-            
             .container{
                 display: grid;
-                grid-template-areas:
-                "header header  header  header"
-                "nav    cabeca  cabeca  cabeca"
-                "nav    main    main    main"
-                "nav    rodape  rodape  rodape";
-                .header{grid-area: header;}
-                .navegacao{grid-area: nav;}
-                .cabeca{grid-area: cabeca;}
-                .main{grid-area: main;}
-                .rodape{grid-area: rodape;}
-                grid-template-rows: 20vh 15vh 50vh 15vh;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: 20svh 15svh 50svh 15svh;
             }
-
-            .header {
+                        
+            #box1{
+                grid-area: 1/1/1/5;
                 background-color: #2d2d3a;
                 padding: 10px;
                 display: flex;
                 align-items: center;
             }
 
+            #box2 {
+                grid-area:2/1/4/1;
+                padding: 10px;
+                background-color: #20202a;
+            }
+            
             span{
                 display: inline-block;
                 width: 50px;
@@ -51,37 +48,36 @@
                 background-color: #fff;
                 border-radius: 50%;
             }
-    
-            .nav{
-                background-color: #20202a;
-                padding: 10px;
-            }
 
-            .cabeca{
+            #box3{
+                grid-area: 2/2/2/5;
                 background-color: #FFC107;
                 padding: 10px;
             }
 
-            .main{
+            #box4{
+                grid-area: 3/2/4/5;
                 background-color: #2d2d3a;
                 padding: 10px;
             }
 
-            .rodape{
+            #box5{
+                grid-area: 4/2/4/5;
                 background-color: #FFC107;
                 padding: 10px;
             }
+
 
         </style>
 	</head>
 
 	<body>
         <div class="container">
-            <div class="header"><span></span><span></span><span></span><br>Header</div>
-            <div class="navegacao">nav</div>
-            <div class="cabeca">cabeça</div>
-            <div class="main">main</div>
-            <div class="rodape">rodape</div>
+            <div class="box" id="box1"><span></span><span></span><span></span>Header</div>
+            <div class="box" id="box2">nav</div>
+            <div class="box" id="box3">cabeca</div>
+            <div class="box" id="box4">main</div>
+            <div class="box" id="box5">rodapé</div>
         </div>
     </body>
     

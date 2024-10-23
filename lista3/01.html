@@ -25,13 +25,15 @@
                 display: grid;
                 grid-template-areas:
                 "header header  header  header"
-                "nav    cabeca  cabeca  cabeca"
-                "nav    main    main    main"
+                "cabeca main    main    aside"
+                "nav    main    main    bside"
                 "nav    rodape  rodape  rodape";
                 .header{grid-area: header;}
                 .navegacao{grid-area: nav;}
                 .cabeca{grid-area: cabeca;}
                 .main{grid-area: main;}
+                .aside{grid-area: aside;}
+                .bside{grid-area: bside;}
                 .rodape{grid-area: rodape;}
                 grid-template-rows: 20vh 15vh 50vh 15vh;
             }
