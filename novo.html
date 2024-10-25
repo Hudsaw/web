@@ -11,30 +11,31 @@
                 margin: 0px;
                 display: flex;
                 align-items: center;
-                justify-content: center;
+
             }
             .container{
                 display: grid;
                 grid-template-areas:
-                "head   head    head"
-                "menu   main    adsense"
-                "menu   main    pix"
-                "footer footer  footer";
-                grid-template-rows: 9vh 50vh 35vh 6vh;
-                grid-template-columns: 25vw 50vw 25vw;
+                "head   head"
+                "nav    nav"
+                "adsense main"
+                "pix    main"
+                "footer footer";
+                grid-template-rows: 10vh 40px 40vh 40vh 40px;
+                grid-template-columns: 20vw 80vw;
             }   
 
             @media(max-width:500px){
                 .container{
                     grid-template-areas: 
                     "head   head"
-                    "menu   menu"
+                    "nav    nav"
                     "main   main"
                     "adsense pix"
                     "footer footer"
                     ;
-                    grid-template-rows: 7vh 9vh 50vh 250px 6vh;
-                    grid-template-columns: 49vw 49vw;
+                    grid-template-rows: 60px 40px 50vh 250px 40px;
+                    grid-template-columns: 48vw 48vw;
                 }
             }
                         
@@ -48,7 +49,7 @@
             }
         
             .d2{
-                grid-area: menu;
+                grid-area: nav;
                 background-color: #20202a;
                 padding: 10px;
             }
@@ -79,7 +80,7 @@
         
             .d6{
                 grid-area: footer;
-                background-color: #2d2d3a;
+                background-color: #20202a;
                 padding: 10px;
             }
 
@@ -89,7 +90,7 @@
             }
             .nome{
                 width: 300px;
-                height: 70px;
+                height: 60px;
             }
 
             .pix {
@@ -100,10 +101,47 @@
                 width: 150px;
                 height: 150px;
             }
-            #par
-            {
+            #par{
                 color: #000;
                 text-align: center;
+            }
+            
+            .nav_menu {
+                display: flex;
+                justify-content: space-evenly;
+            }
+
+            .nav_item {
+                display: inline-block;
+                position: relative;
+            }
+
+            .nav_item:hover .nav_sub {
+                display: block;
+            }
+
+            .nav_sub {
+                display: none;
+                position: absolute;
+                width: 220px;
+            }
+
+            .nav_subitem {
+                padding: 10px;
+            }
+            ul, li{
+                background-color: #20202a;
+            }
+            .content-section {
+                display: none;
+            }
+
+            .content-section:target {
+                display: block;
+            }
+            h4{
+                background-color: #20202a;
+                padding: 10px;
             }
 
         </style>
@@ -114,7 +152,43 @@
         <div class="d1"> <img src="assets/img/logo.webp" alt="Foto pix" class="logo"></a> <br>
             <img src="assets/img/nome.png" alt="Foto qrcode" class="nome"></a>
         </div> 
-        <div class="d2"></div>
+        <div class="d2">
+            <nav class="nav">
+                <ul class="nav_menu">
+                    <li class="nav_item"><a href="#home">Home</a></li>
+                    <li class="nav_item">
+                        <a href="#literatura">Literatura</a>
+                        <ul class="nav_sub">
+                            <ul class="nav_subitem"><a href="#atipico">Um Atípico no Vento</a></ul>
+                            <ul class="nav_subitem"><a href="#laboratorio">A Garota do Laboratório</a></ul>
+                            <ul class="nav_subitem"><a href="#bibliotece">Biblioteca Virtual</a></ul>
+                        </ul>
+                    </li>
+                    <li class="nav_item"><a href="#lazer">Lazer</a>
+                        <ul class="nav_sub">
+                            <ul class="nav_subitem"><a href="#malabares">Oficina de malabares</a></ul>
+                            <ul class="nav_subitem"><a href="#teclado">Manual de teclado</a></ul>
+                            <ul class="nav_subitem"><a href="#receitas">Receitas Rápidas</a></ul>
+                        </ul>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#esportes">Esportes</a>
+                        <ul class="nav_sub">
+                            <ul class="nav_subitem"><a href="#basquete">Basquete</a></ul>
+                            <ul class="nav_subitem"><a href="#voleibol">Voleibol</a></ul>
+                            <ul class="nav_subitem"><a href="#xadrez">Xadrez</a></ul>
+                        </ul>
+                    </li>
+                    <li class="nav_item"><a href="#rpgtext">RPGText</a>
+                        <ul class="nav_sub">
+                            <ul class="nav_subitem"><a href="#modo">Basquete</a></ul>
+                            <ul class="nav_subitem"><a href="#classes">Voleibol</a></ul>
+                            <ul class="nav_subitem"><a href="#inimigos">Xadrez</a></ul>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <div class="d3">Adsense</div>
         <div class="d4">
             <img src="assets/img/pix-logo.webp" alt="Foto pix" class="pix"></a> <br>
@@ -122,29 +196,206 @@
             <p id="par">Se algo lhe proporcionar lazer, contrinbua! </p>
         </div>
         <div class="d5">
-    
-            <br><p>Sempre um entusiasta de atividades de lazer, iniciou fazendo manuais para suas aulas de Educação Física</p>
+            <div id="home" class="content-section">
+                <h4>Site do Hudson Borges</h4>
+                <br><p>Ócio é o tempo livre utilizado para atividades sem se importar com produtividade, apesar de ser potencialmente produtiva. O lazer nos faz ser mais produtivos enquanto estivermos trabalhando.</p><br>
+                <p>Sempre um entusiasta de atividades de lazer, iniciou fazendo material de apoio para suas aulas de Educação Física e atividades extra-curriculares que ministrava.</p><br>
+                <p>Participou como professor de diversos programas socias em muitas escolas diferentes. Atuou com basquete, voleibol, futsal, xadrez, malabares e brincadeiras populares.</p><br>
+                <p>Por vezes o interesse em leitura foi sua principal forma de lazer. Escreveu dois livros: Um atípico no vento (autobiográfico com fantasia) e A garota do laboratório (ficção).</p><br>
+                <p>Com as filhas crescendo apoiou os interesses delas em aulas de música, culinária e desenhos. Montando um manual de teclado e um livro de receitas rápidas para elas.</p><br>  
+            </div>
+            <div id="literatura" class="content-section">
+                <h4>Literatura</h4>
+                <p><a href="https://drive.google.com/drive/folders/1Rf9CxWdqFsBFqxewTirLIrJGriFHrimt?usp=sharing" target="_blank">Biblioteca Virtual</a>
+            <p>Feito quando elas começaram a se interessar na leitura</p>
+            </p>
+            </div>
+            <div id="lazer" class="content-section">
+                <h4>Lazer</h4>
+            <br><p>Mais tarde continuou para atender as necessidades de suas filhas.</p>
+            </div>
+            <div id="malabares" class="content-section">
+                <br><p>Feito para ensinar a fazer malabarismo</p>
+                <br><p>1. Criação do objeto. Colocar pó de madeira em uma garrafa, colocar então um balão no bocal da garrafa, virando a mesma e apertando-a, coloque a quantidade desejada. Em seguida desate o balão do bocal e amarre o balão, corte o excesso. Pegue dois balões e corte a parte espichada, deixando somente o contorno redondo e com estas encape o balão amarrado.</p>
+                <br><p>2. Manipulação de bola. Livremente com a bola; manusear a bola; quicar a bola; lançar e segurar com as duas mãos; lançar bater palmas e segurar.</p>
+                <br><p>3. Balanceio com bola. Lançar e pegar com a mão direita e depois com a esquerda; lançar com uma mão e pegar com a outra; lançar deixar quicar e depois segurar.</p>
+                <br><p>4. Balanceio duplo (duas bolas). Lançar e pegar com as mesmas mãos; lançar cruzado (da direita para a esquerda e da esquerda para a direita) ao mesmo tempo; lançar uma e ao cair no chão lançar a outra cruzada; lançar uma, quando esta alcançar o ponto mais alto, lançar a outra; lançar uma e depois acertar com a outra; lançar uma e depois a outra por baixo.</p>
+                <br><p>5. Malabarismo. Com duas bolas em uma das mãos e uma na outra vai lançar primeiro uma das bolas da mão que tem duas, assim que esta atingir o ponto mais alto, lançar a outra por baixo.</p>
+                    
+                <br><a href="https://drive.google.com/file/d/0B5JPpgEGgluRTWktaWxiMmtPdGc/view?usp=sharing&resourcekey=0-XzFL7OnfCZlwRaBNhfdbig" download="Oficina de Malabares">
+                        <img src="assets/icons/005-resume.png" alt="Baixar arquivo">
+                    </a>
+            </div>
+            <div id="teclado" class="content-section">
+            <p>Feito quando elas começaram a querer aprender música</p>
+            <a href="https://drive.google.com/file/d/1hpmumrI2jyIeSHSDtCojsnBVoOjUvhzP/view?usp=sharing" target="_blank">Livro de Receitas</a>
+            <p>Feito quando elas começaram a se aventurar na cozinha</p><a href="https://docs.google.com/document/d/0B5JPpgEGgluROU9FUmVVc3ZtM2c/edit?usp=sharing&ouid=101031211457267537978&resourcekey=0-2q4fqEsRFpheWAGgTazYOQ&rtpof=true&sd=true" target="_blank">Manual de Malabarismo</a>
+            </div>
+
+            <div id="esportes" class="content-section">
+                <h4>Esportes</h4>
+            
             <a href="https://docs.google.com/document/d/0B5JPpgEGgluRSkZvMTdKLWlVb1k/edit?usp=sharing&ouid=101031211457267537978&resourcekey=0-PyQiMVncvA5qLctX1EHpJA&rtpof=true&sd=true" target="_blank">Manual de Xadrez</a>
             <p>Feito para ensinar a jogar Xadrez</p>
-            <a href="https://docs.google.com/document/d/0B5JPpgEGgluROU9FUmVVc3ZtM2c/edit?usp=sharing&ouid=101031211457267537978&resourcekey=0-2q4fqEsRFpheWAGgTazYOQ&rtpof=true&sd=true" target="_blank">Manual de Malabarismo</a>
-            <p>Feito para ensinar a fazer malabarismo</p>
+            
             <a href="https://docs.google.com/document/d/0B5JPpgEGgluRLU5id2xEMXE1SWs/edit?usp=sharing&ouid=101031211457267537978&resourcekey=0-K5kYK68VDvvzEqwyIUD8JA&rtpof=true&sd=true" target="_blank">Manual de Basquete</a>
             <p>Feito para auxiliar nas aulas de basquete</p>
             <a href="https://docs.google.com/document/d/0B5JPpgEGgluRVldPbnBSd0swbWM/edit?usp=sharing&ouid=101031211457267537978&resourcekey=0-RDDzPzfeHSJpelQoqZEzqw&rtpof=true&sd=true" target="_blank">Avaliações em Voleibol</a>
             <p>Feito para auxiliar nas avaliações de voleibol</p>
-            <br><p>Mais tarde continuou para atender as necessidades de suas filhas.</p>
-            <a href="https://drive.google.com/file/d/0B5JPpgEGgluRTWktaWxiMmtPdGc/view?usp=sharing&resourcekey=0-XzFL7OnfCZlwRaBNhfdbig" target="_blank">Manual de Teclado</a>
-            <p>Feito quando elas começaram a querer aprender música</p>
-            <a href="https://drive.google.com/file/d/1hpmumrI2jyIeSHSDtCojsnBVoOjUvhzP/view?usp=sharing" target="_blank">Livro de Receitas</a>
-            <p>Feito quando elas começaram a se aventurar na cozinha</p>
-            <a href="https://drive.google.com/drive/folders/1Rf9CxWdqFsBFqxewTirLIrJGriFHrimt?usp=sharing" target="_blank">Biblioteca Virtual</a>
-            <p>Feito quando elas começaram a se interessar na leitura</p>
-            <br><p>Atualmente como estudante de Análise de Sistemas continua.</p>
-            <a href="https://docs.google.com/document/d/0B5JPpgEGgluRQktnUXFzN3dpZU0/edit?usp=sharing&ouid=101031211457267537978&resourcekey=0-g1xRnhoGTOBkRD-7XF344w&rtpof=true&sd=true" target="_blank">Manual de Excel</a>
-            <p>Feito para dar aulas de excel</p>
-            <a href="https://drive.google.com/drive/folders/1zZgnfOVeWaELnMAGG_hj3g-L_b6-iuAV?usp=sharing" target="_blank">Biblioteca Virtual</a>
-            <p>Feito para consultar material de leitura</p>
-            <br><p>Com o tempo compartilhou com diversas pessoas seu arquivos.</p>
+            </div>
+
+            <div id="rpgtext" class="content-section">
+                <h4>RPGText do Hudson Borges</h4>
+            
+                <div class="secao">
+       
+                    <!-- Áudio com controle automático -->
+                    <audio id="backgroundAudio" autoplay loop>
+                        <source src="assets/sounds/caverna.mp3" type="audio/mpeg">
+                        Seu navegador não suporta o elemento de áudio.
+                    </audio>
+                    
+                    <p> Bem-vindo ao início da aventura! <br> Neste jogo você irá explorar e combater pelos seus ideais.</p>
+            
+                <div class="secao">
+                    <h2>Modos de Jogo</h2>
+                    <table>           
+                        <tr>
+                            <td rowspan="4"><img src="assets/img/home.png" class="foto"></td>
+                            <td><h4>Aleatório: </h4></td>
+                            <td><p>Neste modo a equipe entra no jogo para concluir as explorações e os confrontos decidindo e a trilha pelo rolar dos dados. Baixe o arquivo ao lado e escreva a sua própria campanha</p></td>
+                            <td class="invert">
+                                <a href="assets/standard.txt" download="standard.txt">
+                                    <img src="assets/icons/005-resume.png" alt="Baixar arquivo">
+                                </a>
+                            </td>
+                        </tr>
+                            <td><h4>História: </h4></td>
+                            <td><p>Neste modo a equipe entra no jogo e a trilha é pré-definida, a cada duas exploração bem sucedidas a equipe vai para um confronto. Baixe o arquivo e escreva a sua própria campanha</p></td>
+                            <td class="invert">
+                                <a href="assets/historia.txt" download="historia.txt">
+                                    <img src="assets/icons/005-resume.png" alt="Baixar arquivo">
+                                </a>
+                            </td>
+                        </tr>
+                    </table> 
+                </div>
+                <div class="secao">
+                    <h2>Classes do Jogo</h2>
+                    <table>           
+                        <tr>
+                            <td rowspan="4"><img src="assets/img/11.png" class="foto"></td>
+                            <td colspan="2"><h4>Bárbaro</h4></td>
+                        </tr>
+                            <td colspan="2"><p>O Bárbaro é um Tank pronto para a batalha, resiste bem aos danos. Quando bonificado recebe o dobro de vida e metade do dano.</p></td>
+                        </tr>
+                        <td><p>Dano: 15</p></td>
+                        <td><p>Vida: 1000</p></td>
+                        </tr>
+                    </table> 
+                    
+                    <table class="invert">           
+                        <tr>
+                            <td rowspan="4"><img src="assets/img/12.png" class="foto"></td>
+                            <td colspan="2"><h4>Caçadora</h4></td>
+                        </tr>
+                            <td colspan="2"><p>A Caçadora é rápida e ágil, atacando à distância com precisão. Tem 5% chances de acerto crítico.</p></td>
+                        </tr>
+                            <td><p>Dano: 20</p></td>
+                            <td><p>Vida: 600</p></td>
+                        </tr>
+                    </table>
+            
+                    <table>           
+                        <tr>
+                            <td rowspan="4"><img src="assets/img/13.png" class="foto"></td>
+                            <td colspan="2"><h4>Maga</h4></td>
+                        </tr>
+                            <td colspan="2"><p>A Maga usa sua inteligência para lançar poderosos feitiços. Forte contra inimigos do tipo físico, mas fraca contra elementais.</p></td>
+                        </tr>
+                            <td><p>Dano: 25</p></td>
+                            <td><p>Vida: 400</p></td>
+                        </tr>
+                    </table>
+            
+                    <table class="invert">           
+                        <tr>
+                            <td rowspan="4"><img src="assets/img/14.png" class="foto"></td>
+                            <td colspan="2"><h4>Assassino</h4></td>
+                        </tr>
+                            <td colspan="2"><p>O Assassino é furtivo e letal, atacando seus inimigos de surpresa. Tem 5% chances de evasiva. Quando derrota um inimigo ganha mais dano, mas não ganha vida.</p></td>
+                        </tr>
+                            <td><p>Dano: 30</p></td>
+                            <td><p>Vida: 200</p></td>
+                        </tr>
+                    </table>
+            
+                    <table>           
+                        <tr>
+                            <td rowspan="4"><img src="assets/img/15.png" class="foto"></td>
+                            <td colspan="2"><h4>Curandeira</h4></td>
+                        </tr>
+                            <td colspan="2"><p>A Curandeira é leal e gentil, trata das feridas e cura venenos. Quando bonificada, sua cura é aumentada.</p></td>
+                        </tr>
+                            <td><p>Cura: 10</p></td>
+                            <td><p>Vida: 800</p></td>
+                        </tr>
+                </table>
+            
+                </div>
+                <div class="secao">
+                    <h2>Inimigos do Jogo</h2>
+                    <table>           
+                        <tr>
+                            <td rowspan="4"><img src="assets/img/21.png" class="foto"></td>
+                            <td colspan="2"><h4>Golem Elemental</h4></td>
+                        </tr>
+                            <td colspan="2"><p>O Golem Elemental utiliza ataques mágicos, fragmentos caem na área onde seus inimigos estão. Sua força vem de todos os elementos da natureza.</p></td>
+                        </tr>
+                            <td><p>Dano: 37</p></td>
+                            <td><p>Vida: 400</p></td>
+                        </tr>
+                    </table> 
+                    
+                    <table class="invert">           
+                        <tr>
+                            <td rowspan="4"><img src="assets/img/22.png" class="foto"></td>
+                            <td colspan="2"><h4>Rei Ogro</h4></td>
+                        </tr>
+                            <td colspan="2"><p>O Rei Ogro utiliza ataques físicos, arremessando lanças sempre o inimigo com mais vida. Sua força vem das atividades físicas extenuantes.</p></td>
+                        </tr>
+                            <td><p>Dano: 39</p></td>
+                            <td><p>Vida: 500</p></td>
+                        </tr>
+                    </table>
+            
+                    <table>           
+                        <tr>
+                            <td rowspan="4"><img src="assets/img/23.png" class="foto"></td>
+                            <td colspan="2"><h4>Mago Esqueleto</h4></td>
+                        </tr>
+                            <td colspan="2"><p>O Mago Esqueleto utiliza ataques individuais de magia negra. Seu ataque é uma poderosa chuva de cristais em todos os inimigos.</p></td>
+                        </tr>
+                        <td><p>Dano: 41</p></td>
+                        <td><p>Vida: 400</p></td>
+                    </tr>
+                    </table>
+            
+                    <table class="invert">           
+                        <tr>
+                            <td rowspan="4"><img src="assets/img/24.png" class="foto"></td>
+                            <td colspan="2"><h4>Dragão Lutador</h4></td>
+                        </tr>
+                            <td colspan="2"><p>O Dragão Lutador utiliza ataques físicos individuais. Se diverte com as presas, ataca sempre o membro com mais vida do grupo até acabar com todos.</p></td>
+                        </tr>
+                            <td><p>Dano: 43</p></td>
+                            <td><p>Vida: 500</p></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+                </div>
+
         </div>
         <div class="d6">
             <table>
