@@ -34,7 +34,7 @@
                     "adsense pix"
                     "footer footer"
                     ;
-                    grid-template-rows: 60px 40px 50vh 250px 40px;
+                    grid-template-rows: 60px 40px 500px 250px 40px;
                     grid-template-columns: 48vw 48vw;
                 }
             }
@@ -143,15 +143,54 @@
                 background-color: #20202a;
                 padding: 10px;
             }
+            .foto{
+                height: 100px;
+                width: 100px;
+            }
+
+
+            #contato form input, select {
+                width: 250px;
+                padding: 8px;
+                margin-top: 5px;
+            }
+
+            #contato textarea{
+                background-color: #FFC107;
+                color: #000;
+                width: 300px;
+                height: 100px;
+                padding: 8px;
+                margin-top: 5px;
+            }
+            #contato form label[for="msg"] {
+                vertical-align: top;
+            }
+
 
         </style>
     </head>    
 
 <body>
     <div class="container">
+
         <div class="d1"> <img src="assets/img/logo.webp" alt="Foto pix" class="logo"></a> <br>
             <img src="assets/img/nome.png" alt="Foto qrcode" class="nome"></a>
+            <!-- Áudio com controle automático -->
+            <audio id="backgroundAudio" autoplay loop>
+                <source src="assets/sounds/caverna.mp3" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
         </div> 
+
+        <div class="d3">Adsense</div>
+
+        <div class="d4">
+            <img src="assets/img/pix-logo.webp" alt="Foto pix" class="pix"></a> <br>
+            <img src="assets/img/qrcode.png" alt="Foto qrcode" class="qrcode"></a>
+            <p id="par">Se algo lhe proporcionar lazer, contrinbua! </p>
+        </div>
+
         <div class="d2">
             <nav class="nav">
                 <ul class="nav_menu">
@@ -161,7 +200,7 @@
                         <ul class="nav_sub">
                             <ul class="nav_subitem"><a href="#atipico">Um Atípico no Vento</a></ul>
                             <ul class="nav_subitem"><a href="#laboratorio">A Garota do Laboratório</a></ul>
-                            <ul class="nav_subitem"><a href="#bibliotece">Biblioteca Virtual</a></ul>
+                            <ul class="nav_subitem"><a href="#biblioteca">Biblioteca Virtual</a></ul>
                         </ul>
                     </li>
                     <li class="nav_item"><a href="#lazer">Lazer</a>
@@ -181,20 +220,16 @@
                     </li>
                     <li class="nav_item"><a href="#rpgtext">RPGText</a>
                         <ul class="nav_sub">
-                            <ul class="nav_subitem"><a href="#modo">Basquete</a></ul>
-                            <ul class="nav_subitem"><a href="#classes">Voleibol</a></ul>
-                            <ul class="nav_subitem"><a href="#inimigos">Xadrez</a></ul>
+                            <ul class="nav_subitem"><a href="#modo">Modos de Jogo</a></ul>
+                            <ul class="nav_subitem"><a href="#classes">Classes no Jogo</a></ul>
+                            <ul class="nav_subitem"><a href="#inimigos">Inimigos no Jogo</a></ul>
                         </ul>
                     </li>
+                    <li class="nav_item"><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
         </div>
-        <div class="d3">Adsense</div>
-        <div class="d4">
-            <img src="assets/img/pix-logo.webp" alt="Foto pix" class="pix"></a> <br>
-            <img src="assets/img/qrcode.png" alt="Foto qrcode" class="qrcode"></a>
-            <p id="par">Se algo lhe proporcionar lazer, contrinbua! </p>
-        </div>
+
         <div class="d5">
             <div id="home" class="content-section">
                 <h4>Site do Hudson Borges</h4>
@@ -204,61 +239,102 @@
                 <p>Por vezes o interesse em leitura foi sua principal forma de lazer. Escreveu dois livros: Um atípico no vento (autobiográfico com fantasia) e A garota do laboratório (ficção).</p><br>
                 <p>Com as filhas crescendo apoiou os interesses delas em aulas de música, culinária e desenhos. Montando um manual de teclado e um livro de receitas rápidas para elas.</p><br>  
             </div>
+
             <div id="literatura" class="content-section">
                 <h4>Literatura</h4>
-                <p><a href="https://drive.google.com/drive/folders/1Rf9CxWdqFsBFqxewTirLIrJGriFHrimt?usp=sharing" target="_blank">Biblioteca Virtual</a>
-            <p>Feito quando elas começaram a se interessar na leitura</p>
-            </p>
+                <br><p>Nesta secção apresento livros que escrevi e minha biblioteca particular</p>
             </div>
+
+                <div id="atipico" class="content-section">
+                    <h4>Um Atípico no Vento</h4>
+                    <br><p>Livro escrito de forma autobiográfica. Relata acontecimentos da juventude do autor com um toque de fantasia. Cheio de regionalismos da capital catarinense, este livro é recheado de termos utilizados pelos nativos da ilha de Florianópolis.</p>
+                    <br><a href="https://drive.google.com/file/d/15GaOtQiPaVxM6NFo4hIWEpZEU4w9KpbQ/view?usp=sharing" target="_blank" download="Um Atipico no vento">
+                        <img src="assets/icons/005-resume.png" alt="Baixar arquivo">
+                    </a>
+                </div>
+                <div id="laboratorio" class="content-section">
+                    <h4>A garota do Laboratório</h4>
+                    <br><p>Livro distópico, ambientado em um futuro próximo esta ficção tras uma ideia de como pode se tornar nossa sociedade. Uma garota criada por pai cientista pode resolver os problemas da humanidades. Será que vale a pena salvar a humanidade?</p>
+                    <br><a href="https://drive.google.com/file/d/1OXPHgvLZPMYu76Nd56Sn2V43uskcFNSH/view?usp=sharing" target="_blank" download="A garota do Laboratório">
+                        <img src="assets/icons/005-resume.png" alt="Baixar arquivo">
+                    </a>
+                </div>
+                <div id="biblioteca" class="content-section">
+                    <h4>Biblioteca Virtual</h4>
+                    <br><p>Feito quando elas começaram a se interessar na leitura</p>
+                    <br><a href="https://drive.google.com/drive/folders/1Rf9CxWdqFsBFqxewTirLIrJGriFHrimt?usp=sharing" target="_blank" download="Abrir biblioteca">
+                        <img src="assets/icons/005-resume.png" alt="Baixar arquivo">
+                    </a>
+                </div>
+
             <div id="lazer" class="content-section">
                 <h4>Lazer</h4>
             <br><p>Mais tarde continuou para atender as necessidades de suas filhas.</p>
             </div>
-            <div id="malabares" class="content-section">
-                <br><p>Feito para ensinar a fazer malabarismo</p>
-                <br><p>1. Criação do objeto. Colocar pó de madeira em uma garrafa, colocar então um balão no bocal da garrafa, virando a mesma e apertando-a, coloque a quantidade desejada. Em seguida desate o balão do bocal e amarre o balão, corte o excesso. Pegue dois balões e corte a parte espichada, deixando somente o contorno redondo e com estas encape o balão amarrado.</p>
-                <br><p>2. Manipulação de bola. Livremente com a bola; manusear a bola; quicar a bola; lançar e segurar com as duas mãos; lançar bater palmas e segurar.</p>
-                <br><p>3. Balanceio com bola. Lançar e pegar com a mão direita e depois com a esquerda; lançar com uma mão e pegar com a outra; lançar deixar quicar e depois segurar.</p>
-                <br><p>4. Balanceio duplo (duas bolas). Lançar e pegar com as mesmas mãos; lançar cruzado (da direita para a esquerda e da esquerda para a direita) ao mesmo tempo; lançar uma e ao cair no chão lançar a outra cruzada; lançar uma, quando esta alcançar o ponto mais alto, lançar a outra; lançar uma e depois acertar com a outra; lançar uma e depois a outra por baixo.</p>
-                <br><p>5. Malabarismo. Com duas bolas em uma das mãos e uma na outra vai lançar primeiro uma das bolas da mão que tem duas, assim que esta atingir o ponto mais alto, lançar a outra por baixo.</p>
-                    
-                <br><a href="https://drive.google.com/file/d/0B5JPpgEGgluRTWktaWxiMmtPdGc/view?usp=sharing&resourcekey=0-XzFL7OnfCZlwRaBNhfdbig" download="Oficina de Malabares">
-                        <img src="assets/icons/005-resume.png" alt="Baixar arquivo">
-                    </a>
-            </div>
-            <div id="teclado" class="content-section">
-            <p>Feito quando elas começaram a querer aprender música</p>
-            <a href="https://drive.google.com/file/d/1hpmumrI2jyIeSHSDtCojsnBVoOjUvhzP/view?usp=sharing" target="_blank">Livro de Receitas</a>
-            <p>Feito quando elas começaram a se aventurar na cozinha</p><a href="https://docs.google.com/document/d/0B5JPpgEGgluROU9FUmVVc3ZtM2c/edit?usp=sharing&ouid=101031211457267537978&resourcekey=0-2q4fqEsRFpheWAGgTazYOQ&rtpof=true&sd=true" target="_blank">Manual de Malabarismo</a>
-            </div>
+
+                <div id="malabares" class="content-section">
+                    <h4>Oficina de malabares</h4>
+                    <br><p>Feito para ensinar a fazer malabarismo</p>
+                    <br><p>1. Criação do objeto. Colocar pó de madeira em uma garrafa, colocar então um balão no bocal da garrafa, virando a mesma e apertando-a, coloque a quantidade desejada. Em seguida desate o balão do bocal e amarre o balão, corte o excesso. Pegue dois balões e corte a parte espichada, deixando somente o contorno redondo e com estas encape o balão amarrado.</p>
+                    <br><p>2. Manipulação de bola. Livremente com a bola; manusear a bola; quicar a bola; lançar e segurar com as duas mãos; lançar bater palmas e segurar.</p>
+                    <br><p>3. Balanceio com bola. Lançar e pegar com a mão direita e depois com a esquerda; lançar com uma mão e pegar com a outra; lançar deixar quicar e depois segurar.</p>
+                    <br><p>4. Balanceio duplo (duas bolas). Lançar e pegar com as mesmas mãos; lançar cruzado (da direita para a esquerda e da esquerda para a direita) ao mesmo tempo; lançar uma e ao cair no chão lançar a outra cruzada; lançar uma, quando esta alcançar o ponto mais alto, lançar a outra; lançar uma e depois acertar com a outra; lançar uma e depois a outra por baixo.</p>
+                    <br><p>5. Malabarismo. Com duas bolas em uma das mãos e uma na outra vai lançar primeiro uma das bolas da mão que tem duas, assim que esta atingir o ponto mais alto, lançar a outra por baixo.</p>
+
+                    <br><a href="https://docs.google.com/document/d/0B5JPpgEGgluROU9FUmVVc3ZtM2c/edit?usp=sharing&ouid=101031211457267537978&resourcekey=0-2q4fqEsRFpheWAGgTazYOQ&rtpof=true&sd=true" target="_blank" download="Oficina de Malabares">
+                            <img src="assets/icons/005-resume.png" alt="Baixar arquivo">
+                        </a>
+                </div>
+
+                <div id="teclado" class="content-section">
+                    <h4>Manual de teclado</h4>
+                    <br><p>Feito quando minhas filhas começaram a querer aprender música</p>
+                    <br><a href="https://drive.google.com/file/d/0B5JPpgEGgluRTWktaWxiMmtPdGc/view?usp=sharing&resourcekey=0-XzFL7OnfCZlwRaBNhfdbig" target="_blank" download="Manual de Teclado">
+                    <img src="assets/icons/005-resume.png" alt="Baixar arquivo"></a>
+                </div>
+
+                <div id="receitas" class="content-section">
+                    <h4>Livro de receitas rápidas</h4>
+                    <br><p>Feito quando minhas filhas começaram a se aventurar na cozinha</p>
+                    <br><a href="https://drive.google.com/file/d/1hpmumrI2jyIeSHSDtCojsnBVoOjUvhzP/view?usp=sharing" target="_blank" download="Livro de receitas">
+                    <img src="assets/icons/005-resume.png" alt="Baixar arquivo"></a>
+                </div>    
 
             <div id="esportes" class="content-section">
                 <h4>Esportes</h4>
-            
-            <a href="https://docs.google.com/document/d/0B5JPpgEGgluRSkZvMTdKLWlVb1k/edit?usp=sharing&ouid=101031211457267537978&resourcekey=0-PyQiMVncvA5qLctX1EHpJA&rtpof=true&sd=true" target="_blank">Manual de Xadrez</a>
-            <p>Feito para ensinar a jogar Xadrez</p>
-            
-            <a href="https://docs.google.com/document/d/0B5JPpgEGgluRLU5id2xEMXE1SWs/edit?usp=sharing&ouid=101031211457267537978&resourcekey=0-K5kYK68VDvvzEqwyIUD8JA&rtpof=true&sd=true" target="_blank">Manual de Basquete</a>
-            <p>Feito para auxiliar nas aulas de basquete</p>
-            <a href="https://docs.google.com/document/d/0B5JPpgEGgluRVldPbnBSd0swbWM/edit?usp=sharing&ouid=101031211457267537978&resourcekey=0-RDDzPzfeHSJpelQoqZEzqw&rtpof=true&sd=true" target="_blank">Avaliações em Voleibol</a>
-            <p>Feito para auxiliar nas avaliações de voleibol</p>
+                <br><p>Nesta secção estão alguns dos muitos materiais que desenvolvi para me auxiliar nas minhas aulas enquanto professor de Educação Física</p>
             </div>
+
+                <div id="basquete" class="content-section">
+                    <h4>Manual de Basquete</h4>
+                    <br><p>Feito para auxiliar nas aulas de basquete</p>
+                    <br><a href="https://docs.google.com/document/d/0B5JPpgEGgluRLU5id2xEMXE1SWs/edit?usp=sharing&ouid=101031211457267537978&resourcekey=0-K5kYK68VDvvzEqwyIUD8JA&rtpof=true&sd=true" target="_blank" download="Manual de Basquete">
+                    <img src="assets/icons/005-resume.png" alt="Baixar arquivo"></a>
+                </div>
+
+                <div id="voleibol" class="content-section">
+                    <h4>Avaliações em voleibol</h4>
+                    <br><p>Feito para auxiliar nas avaliações de voleibol</p>
+                    <br><a href="https://docs.google.com/document/d/0B5JPpgEGgluRVldPbnBSd0swbWM/edit?usp=sharing&ouid=101031211457267537978&resourcekey=0-RDDzPzfeHSJpelQoqZEzqw&rtpof=true&sd=true" target="_blank" download="Avaliações em Voleibol">
+                    <img src="assets/icons/005-resume.png" alt="Baixar arquivo"></a>
+                </div>
+
+                <div id="xadrez" class="content-section">
+                    <h4>Manual de Xadrez</h4>
+                    <br><p>Feito para ensinar a jogar Xadrez</p>
+                    <br><a href="https://docs.google.com/document/d/0B5JPpgEGgluRSkZvMTdKLWlVb1k/edit?usp=sharing&ouid=101031211457267537978&resourcekey=0-PyQiMVncvA5qLctX1EHpJA&rtpof=true&sd=true" target="_blank" download="Manual de Xadrez">
+                    <img src="assets/icons/005-resume.png" alt="Baixar arquivo"></a>
+                </div>
 
             <div id="rpgtext" class="content-section">
                 <h4>RPGText do Hudson Borges</h4>
-            
-                <div class="secao">
-       
-                    <!-- Áudio com controle automático -->
-                    <audio id="backgroundAudio" autoplay loop>
-                        <source src="assets/sounds/caverna.mp3" type="audio/mpeg">
-                        Seu navegador não suporta o elemento de áudio.
-                    </audio>
-                    
-                    <p> Bem-vindo ao início da aventura! <br> Neste jogo você irá explorar e combater pelos seus ideais.</p>
-            
-                <div class="secao">
-                    <h2>Modos de Jogo</h2>
+                <br><p> Bem-vindo ao início da aventura! <br> Neste jogo você irá explorar e combater pelos seus ideais.</p>
+                <br><a href="https://drive.google.com/file/d/1fhGnlSfyQ94wpw6et4LmejAbD1LmB6Hj/view?usp=sharing" target="_blank" download="Jogo RPGText">
+                    <img src="assets/icons/005-resume.png" alt="Baixar arquivo"></a>
+            </div>
+
+                <div id="modo" class="content-section">
+                    <h4>Modos de Jogo</h4>
                     <table>           
                         <tr>
                             <td rowspan="4"><img src="assets/img/home.png" class="foto"></td>
@@ -280,8 +356,9 @@
                         </tr>
                     </table> 
                 </div>
-                <div class="secao">
-                    <h2>Classes do Jogo</h2>
+
+                <div id="classes" class="content-section">
+                    <h4>Classes do Jogo</h4>
                     <table>           
                         <tr>
                             <td rowspan="4"><img src="assets/img/11.png" class="foto"></td>
@@ -330,7 +407,7 @@
                         </tr>
                     </table>
             
-                    <table>           
+                    <table class="invert">           
                         <tr>
                             <td rowspan="4"><img src="assets/img/15.png" class="foto"></td>
                             <td colspan="2"><h4>Curandeira</h4></td>
@@ -340,11 +417,11 @@
                             <td><p>Cura: 10</p></td>
                             <td><p>Vida: 800</p></td>
                         </tr>
-                </table>
-            
+                    </table>
                 </div>
-                <div class="secao">
-                    <h2>Inimigos do Jogo</h2>
+
+                <div id="inimigos" class="content-section">
+                    <h4>Inimigos do Jogo</h4>
                     <table>           
                         <tr>
                             <td rowspan="4"><img src="assets/img/21.png" class="foto"></td>
@@ -369,7 +446,7 @@
                         </tr>
                     </table>
             
-                    <table>           
+                    <table class="invert">           
                         <tr>
                             <td rowspan="4"><img src="assets/img/23.png" class="foto"></td>
                             <td colspan="2"><h4>Mago Esqueleto</h4></td>
@@ -393,10 +470,59 @@
                         </tr>
                     </table>
                 </div>
+            <div id="contato" class="content-section">
+                <h4>Formulário para Contato</h4>
+                <section id="form">
+                    <form action="processa_form.php" method="POST">
+                        <br><label for="nome">Nome</label>
+                        <input id="nome" type="text">
+                        <br><label for="mail">e-mail</label>
+                        <input id="mail" type="text" name="mail" required> 
+                        <br><label for="estado">Selecione Estado:</label>
+                        <select id="estado" name="estado">
+                            <option value="SC">Santa Catarina</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="EX">Estrangeiro</option>
+                        </select>
+                        <br>
+                        <label for="msg">Mensagem</label>
+                        <textarea id="msg" name="msg" required></textarea> 
+                        <br>
+                        <label for="check">Desejo receber atualizações</label>
+                        <input type="checkbox">
+                        <br>
+                        <input type="submit" value="Enviar" size="40" minlength="50">
+                    </form>
+                </section>
             </div>
-                </div>
 
         </div>
+
         <div class="d6">
             <table>
             <tr>
