@@ -98,6 +98,9 @@ table {
     width: 100%; 
 }
 
+.normal{
+    background-color: #20202a; 
+}
 .invert {
     background-color: #2d2d3a;
 }
