@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Hudson Borges</title>
+		<link rel="stylesheet" type="text/css" href="../style.css">
+        <style>
+            body{
+                height: 100vh;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #btn{
+                height: 300px;
+                width: 400px;
+                font-size: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <button id=btn type="button">Clique no botão</button>
+        <script>
+            let cont=0;
+            let bnt=document.querySelector("button");
+            bnt.addEventListener("keypress",(evento)=>{
+                console.log(evento.key)
+                bnt.innerHTML=cont +", tecla "+evento.key+", KeyCode "+evento.keyCode; 
+                cont++;               
+             })
+
+
+        </script>
+    </body>
+    </html>

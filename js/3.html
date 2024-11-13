@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Hudson Borges</title>
+		<link rel="stylesheet" type="text/css" href="../style.css">
+        <style>
+            body{
+                height: 100vh;
+                display:flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-direction: column;
+            }
+            #btn, p{
+                height: 100px;
+                width: 200px;
+                font-size: 40px;
+            }
+            input{
+                height: 100px;
+                width: 200px;
+                font-size: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>soma</h2>
+        <label for="a">Informa A</label>
+        <input type="text" id="a">
+
+        <label for="b">Informa B</label>
+        <input type="text" id="b">
+
+        <button id=btn type="button">Soma</button>
+
+        <p id="resultado"></p>
+
+        <script>
+            let inputa=document.querySelector("#a");
+            let inputb=document.querySelector("#b");
+            let bnt=document.querySelector("#btn");
+            let res=document.querySelector("#resultado");
+            
+            bnt.addEventListener("click",()=>{
+                let numberA=Number.parseInt(inputa.value)              
+                let numberB=Number.parseInt(inputb.value)   
+                res.innerHTML=numberA+numberB           
+             })
+
+
+        </script>
+    </body>
+    </html>
