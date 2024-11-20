@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Hudson Borges</title>
+		<link rel="stylesheet" type="text/css" href="../style.css">
+        <style>
+            body{
+                height: 100vh;
+                display:flex;
+                align-items: center;
+                flex-direction: column;
+            }
+            #btn, p, label{
+                height: 50px;
+                width: 400px;
+                font-size: 40px;
+                text-align: center;
+            }
+            input{
+                height: 50px;
+                width: 400px;
+                font-size: 40px;
+            }
+        </style>
+        </head>
+        <body>
+            <label for="a">Insira um texto</label>
+            <input type="text" id="a">
+            <button id=btn type="button">copiar texto</button>
+            <div id="resultado"></div>
+            
+            <script>
+                inputa=document.querySelector("#a")
+                bnt=document.querySelector("#btn")
+                res=document.querySelector("#resultado")
+            
+            bnt.addEventListener("click",()=>{
+                let str=inputa.value;
+                inputa.value="";                 
+                let novo=document.createElement("p");
+                novo.innerHTML=str;
+                novo.style.color="#fff";
+                res.appendChild(novo);     
+             })
+            </script>
+        </body>
+    </html>

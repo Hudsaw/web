@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Hudson Borges</title>
+		<link rel="stylesheet" type="text/css" href="../style.css">
+        <style>
+            body{
+                height: 100vh;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            #btn, p, label{
+                height: 50px;
+                width: 400px;
+                font-size: 40px;
+                text-align: center;
+            }
+        </style>
+        </head>
+        <body>
+            <button id=btn type="button">Altera cor</button>
+        
+            <script>
+            
+                bnt=document.querySelector("#btn")
+            
+                bnt.addEventListener("click",()=>{
+                document.body.style.backgroundColor=`#${rc()}${rc()}${rc()}`;     
+            })
+
+            function rc(){
+                return Math.floor(Math.random()*255).toString(16)
+            }
+            </script>
+        </body>
+    </html>

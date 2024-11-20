@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Hudson Borges</title>
+		<link rel="stylesheet" type="text/css" href="../style.css">
+        <style>
+            body{
+                height: 100vh;
+                display:flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-direction: column;
+            }
+            #btn, p{
+                height: 100px;
+                width: 400px;
+                font-size: 40px;
+                text-align: center;
+            }
+            input{
+                height: 100px;
+                width: 400px;
+                font-size: 40px;
+            }
+        </style>
+        </head>
+        <body>
+            <label for="a">Informe a palavra</label>
+            <input type="text" id="a">
+            <button id=btn type="button">Checar se é palíndromo</button>
+            <p id="resultado"></p>
+            
+            <script>
+                let inputa=document.querySelector("#a");
+                let res=document.querySelector("#resultado");
+            
+                function checar(palavra) {
+                    //for(let i=0; i< s.length; i++){
+                    //    if(s[i] != s[s.length-1-i]){
+                    //        return false
+                    //    }
+                    //}
+                    //return true
+                return palavra == palavra.split('').reverse().join('');
+                }
+
+                btn.addEventListener("click", () => {
+                let palavra = inputa.value;
+
+                    if (checar(palavra)) {
+                        res.innerHTML = `A palavra "${palavra}" é um palíndromo.`;
+                        res.style.color="white"
+                    } else {
+                        res.innerHTML = `A palavra "${palavra}" não é um palíndromo.`;
+                        res.style.color="red"
+                    }
+                });
+            </script>
+        </body>
+    </html>

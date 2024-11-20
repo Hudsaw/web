@@ -5,31 +5,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Hudson Borges</title>
 		<link rel="stylesheet" type="text/css" href="../style.css">
+        <style>
+            body{
+                height: 100vh;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            #btn{
+                height: 300px;
+                width: 400px;
+                font-size: 40px;
+            }
+        </style>
 	</head>
     <body>
-        <p id="texto">Helo!</p>
-
-        <div>
-            <button type="button" onclick="imprime()">Hello</button>
-        </div>
-        <p id="clicado">Helo!</p>
-        <div>
-            <button id="click" type="button">cliques</button>
-        </div>
+        <button type="button" id="btn">Hello</button>
+        <h1 id="texto">Aguarde...</h1>
         <script>
-            function imprime(){
-            let msg="Hello!"
-            console.log(msg);
-            alert(msg)
-            (document.querySelector("#texto")).innerHTML=msg
-            }
-            var clique=0;
-            function incremento(){
-                clique+=1;
-                clicado.innerHTML=clique
-            }
-            click.addEventListener("click", incremento)
-
-            
+            let botao=document.querySelector("#btn")
+            botao.addEventListener("click", ()=>{
+                var msg = "Hello World";
+                console.log(msg);
+                texto.innerHTML = "<h1>" + msg + "</h1>";
+                alert(msg)
+            })
         </script>
     </body>

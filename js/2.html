@@ -20,17 +20,15 @@
         </style>
     </head>
     <body>
-        <button id=btn type="button">Clique no botão</button>
+        <button id="btn" type="button">Clique no botão</button>
         <script>
-            let cont=0;
-            let bnt=document.querySelector("button");
-            bnt.addEventListener("keypress",(evento)=>{
-                console.log(evento.key)
-                bnt.innerHTML=cont +", tecla "+evento.key+", KeyCode "+evento.keyCode; 
-                cont++;               
-             })
-
-
+            let cont = 0;
+            let btn = document.querySelector("#btn");
+            btn.addEventListener("click", (evento) => {
+            console.log("Clique detectado!");
+            btn.innerHTML = cont + " cliques no botão"; 
+            cont++;               
+            });
         </script>
     </body>
     </html>
