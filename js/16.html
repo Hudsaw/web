@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Hudson Borges</title>
+		<link rel="stylesheet" type="text/css" href="../style.css">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #20202a;
+                height: 100vh;
+            }
+
+            .container{
+                width: 300px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 4px #000;
+                background-color: #2d2d3a;
+                font-size: 50px;
+            }
+
+            .resultado{
+                background-color: #000;
+                color: #fff;
+                height: 75px;
+                padding: 20px;
+                text-align: right;
+            }
+            
+            .numeros {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .base {
+                display: grid;
+                grid-template-columns: 3fr 1fr;
+            }
+
+            button {
+                background-color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 60px;
+                color: #000;
+                font-size: 24px;
+                cursor: pointer;
+                border: 1px solid #646464;
+                transition: background-color 0.3s;
+            }
+            
+            .res {
+                background-color: #FFC107;
+                height: 100%;
+            }
+            
+            .operadores {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                background-color: #ccc;
+            }
+            
+            .ope {
+              background-color: #ccc;
+            }
+            
+            button:active {
+              opacity: 0.3;
+            }
+
+        </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="resultado">0</div>
+                <div class="operadores">
+                    <button class="ope">+</button>
+                    <button class="ope">-</button>
+                    <button class="ope">x</button>
+                    <button class="ope">÷</button>
+                </div>
+                <div class="base">
+                    <div class="numeros">
+                        <button class="num">7</button>
+                        <button class="num">9</button>
+                        <button class="num">8</button>
+                    
+                        <button class="num">4</button>
+                        <button class="num">5</button>
+                        <button class="num">6</button>
+
+                        <button class="num">1</button>
+                        <button class="num">2</button>
+                        <button class="num">3</button>
+        
+                        <button class="num">0</button>
+                        <button class="num">.</button>
+                        <button class="num">AC</button>
+                    </div>
+                    <button class="res">=</button>
+                </div>
+            </div>
+        
+            <script>
+                const resultado = document.querySelector(".resultado");
+                const buttons = document.querySelectorAll(".num, .ope, .res");
+            
+                let num = "";
+                let a = null;
+                let operator = null;
+                let restart = false;
+            
+                function atualiza(originClear = false) {
+                    resultado.innerText = originClear ? 0 : num.replace(".", ",");
+                }
+            
+                function addDigit(digito) {
+                    if (digito === "," && (num.includes(",") || !num)) return;
+                    
+                    if (restart) {
+                        num = digito;
+                        restart = false;
+                    } else {
+                        num += digito;
+                    }
+            
+                    atualiza();
+                }
+            
+                function setOperator(newOperator) {
+                    if (num) {
+                        calcular();
+                        a = parseFloat(num.replace(",", "."));
+                        num = "";
+                    }
+                    operator = newOperator;
+                }
+            
+                function calcular() {
+                    if (operator === null || a === null) return;
+                    let b = parseFloat(num.replace(",", "."));
+                    let resultValue;
+            
+                    switch (operator) {
+                        case "+":
+                            resultValue = a + b;
+                            break;
+                        case "-":
+                            resultValue = a - b;
+                            break;
+                        case "x":
+                            resultValue = a * b;
+                            break;
+                        case "/":
+                            resultValue = a / b;
+                            break;
+                        default:
+                            return;
+                    }
+            
+                    if (resultValue.toString().split(".")[1]?.length > 5) {
+                        num = parseFloat(resultValue.toFixed(5)).toString();
+                    } else {
+                        num = resultValue.toString();
+                    }
+            
+                    operator = null;
+                    a = null;
+                    restart = true;
+                    atualiza();
+                }
+            
+                function limpa() {
+                    num = "";
+                    a = null;
+                    operator = null;
+                    atualiza(true);
+                }
+            
+                buttons.forEach((button) => {
+                    button.addEventListener("click", () => {
+                        const buttonText = button.innerText;
+            
+                        if (/^[0-9,.]+$/.test(buttonText)) {
+                            addDigit(buttonText);
+                        } else if (["+", "-", "x", "/"].includes(buttonText)) {
+                            setOperator(buttonText);
+                        } else if (buttonText === "=") {
+                            calcular();
+                        } else if (buttonText === "AC") {
+                            limpa();
+                        }
+                    });
+                });
+            </script>            
+        </body>
+    </html>

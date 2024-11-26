@@ -9,41 +9,48 @@
             body{
                 height: 100vh;
                 display:flex;
-                justify-content: space-evenly;
                 align-items: center;
                 flex-direction: column;
             }
             #btn, p{
                 height: 100px;
                 width: 200px;
-                font-size: 40px;
+                font-size: 20px;
                 text-align: center;
             }
-            input{
-                height: 100px;
-                width: 200px;
-                font-size: 40px;
-            }
+            
         </style>
         </head>
         <body>
-            <label for="a">Informe o intervalo</label>
-            <input type="text" id="a">
-            <input type="text" id="b">
-            <button id=btn type="button">Sortear</button>
-            <p id="resultado"></p>
+            <label for="a">Tipos de variáveis</label>
+            <button id=btn type="button">Imprimir</button>
+            <p id="res"></p>
             
             <script>
-                let inputa=document.querySelector("#a");
-                let inputb=document.querySelector("#b");
-                let bnt=document.querySelector("#btn");
-                let res=document.querySelector("#resultado");
+                let texto = "Olá, turma!";
+                let numero = 50;
+                let booleano = true;
+                let lista = [1, 2, 3, 4];
+                let objeto = { nome: "Hudson", idade: 46 };
             
-            bnt.addEventListener("click",()=>{
-                let numberA=Number.parseInt(inputa.value);              
-                let numberB=Number.parseInt(inputb.value);   
-                res.innerHTML= Math.trunc(Math.random() * (numberB - numberA + 1)) + numberA;      
-             })
+                function tipoDeDado(variavel) {
+                    return typeof variavel;
+                }
+
+                btn.addEventListener("click", () => {
+                    res.innerHTML = "";
+                    const tipos = [texto, numero, booleano, lista, objeto];
+                    tipos.forEach((item, index) => {
+                        let novo = document.createElement("p");
+                        novo.innerHTML = `Dado ${index + 1}: ${tipoDeDado(item)}`;
+                        res.appendChild(novo);
+                    });
+                });
+                console.log(tipoDeDado(texto));
+                console.log(tipoDeDado(numero));
+                console.log(tipoDeDado(booleano));
+                console.log(tipoDeDado(lista));
+                console.log(tipoDeDado(objeto));
             </script>
         </body>
     </html>

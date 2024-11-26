@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Hudson Borges</title>
+		<link rel="stylesheet" type="text/css" href="../style.css">
+        <style>
+            body{
+                height: 100vh;
+                display:flex;
+                align-items: center;
+                flex-direction: column;
+            }
+            #btn, p{
+                display:flex;
+                height: 100px;
+                width: 400px;
+                font-size: 40px;
+                text-align: center;
+            }
+            #lista{
+                font-size: 40px;
+                flex-direction: row;
+            }
+            input{
+                height: 100px;
+                width: 400px;
+                font-size: 40px;
+            }
+        </style>
+        </head>
+        <body>
+            <label for="a">Informe o limite do intervalo</label>
+            <input type="text" id="a">
+            <button id=btn type="button">Selecionar aleatório</button>
+            <p id="res"></p>
+            <ul id="lista"></ul>
+            
+            <script>
+                let inputa=document.querySelector("#a");
+                let resultados = [];
+            
+                function gerarAleatorio(limite) {
+                    return Math.floor(Math.random() * (limite + 1));
+                }
+
+                btn.addEventListener("click", () => {
+                    const limite = parseInt(inputa.value, 10);
+                    const aleatorio = gerarAleatorio(limite);
+                    resultados.push(aleatorio);
+                    res.textContent = `Número aleatório: ${aleatorio}`;
+                
+                    lista.innerHTML = "";
+                    resultados.forEach((num, index) => {
+                        const item = document.createElement("li");
+                        item.textContent = `Número ${index + 1}: ${num}`;
+                        lista.appendChild(item);
+                    });
+                });
+
+            </script>
+        </body>
+    </html>

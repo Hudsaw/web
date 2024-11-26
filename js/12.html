@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Hudson Borges</title>
+		<link rel="stylesheet" type="text/css" href="../style.css">
+        <style>
+            body{
+                height: 100vh;
+                display:flex;
+                align-items: center;
+                flex-direction: column;
+            }
+            #btn, p{
+                display:flex;
+                height: 100px;
+                width: 400px;
+                font-size: 40px;
+                text-align: center;
+            }
+            #lista{
+                font-size: 40px;
+                flex-direction: row;
+            }
+            input{
+                height: 100px;
+                width: 400px;
+                font-size: 40px;
+            }
+        </style>
+        </head>
+        <body>
+            <label for="a">Informe o intervalo</label>
+            <input type="text" id="a">
+            <input type="text" id="b">
+            <button id=btn type="button">Selecionar aleatório</button>
+            <p id="res"></p>
+            <ul id="lista"></ul>
+            
+            <script>
+                let inputa=document.querySelector("#a");
+                let inputb=document.querySelector("#b");
+                let resultados = [];
+            
+                function gerarAleatorio(inputa, inputb) {
+                    a= parseInt(inputa.value, 10);
+                    b= parseInt(inputb.value, 10);
+                    return Math.floor(Math.random() * (b - a + 1)) + a; 
+                }
+
+                btn.addEventListener("click", () => {
+                    const aleatorio = gerarAleatorio(inputa, inputb);
+                    const intervalo = {
+                        a: parseInt(inputa.value, 10), 
+                        b: parseInt(inputb.value, 10), 
+                        c: aleatorio
+                    };
+                    resultados.push(intervalo);
+                    res.textContent = `Número aleatório: ${aleatorio}`;
+                
+                    lista.innerHTML = "";
+                    resultados.forEach((resultado, index) => {
+                        const item = document.createElement("li");
+                        item.textContent = `Resultado ${index + 1}: Número sorteado (${resultado.c}) no intervalo [${resultado.a}, ${resultado.b}]`;
+                        lista.appendChild(item);
+                    });
+                });
+
+            </script>
+        </body>
+    </html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Hudson Borges</title>
+		<link rel="stylesheet" type="text/css" href="../style.css">
+        <style>
+            body{
+                height: 100vh;
+            }
+            #teclas{
+                height: 50px;
+                width: 400px;
+                font-size: 40px;
+            }
+        </style>
+        </head>
+        <body>
+            <div id="teclas"></div>
+        
+            <script>
+                const divTeclas = document.getElementById("teclas");
+        
+                document.addEventListener("keydown", function(event) {
+                    const tecla = document.createElement("div");
+                    tecla.classList.add("tecla");
+                    tecla.textContent = event.key;
+        
+                    divTeclas.appendChild(tecla);
+                });
+            </script>
+        </body>
+    </html>
