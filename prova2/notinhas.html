@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Hudson Borges</title>
+		<link rel="stylesheet" type="text/css" href="../style.css">
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+            #nota{
+                word-wrap: break-word;
+                height: 20vh;
+                width: 90%;
+                font-size: 40px;
+                padding: 10px;
+                overflow-y: scroll;
+                white-space: pre-wrap;
+            }
+            button{
+                height: 40px;
+                width: 200px;
+            }
+        </style>
+        </head>
+        <body>
+            <input id="nota" type="text">
+            <div>
+                <button id="salvar">Salvar</button>
+            </div>
+            <ul>
+
+            </ul>
+        
+            <script>
+                let inputnota = document.querySelector("#nota");
+                let btnsalvar = document.querySelector("#salvar");
+                let btnconsulta = document.querySelector("#consulta");
+                let lista = document.querySelector("ul");
+                let contador = 0;
+
+                btnsalvar.addEventListener("click", () => {
+                    notas.push(inputnotas.value);
+                    localStorage.setItem(notas.length-1,notas[notas.length-1]);
+                    atualizarLista();
+                })
+                function atualizarLista(){
+                    lista.innerHTML="";
+                    notas.forEach(nota,index) => {
+                        let li=document.createElement("li");
+                        li.innerText = nota;
+                        lista.appendChild(li);
+                        inputnota.value="";    
+                    }
+                };
+
+                function carregarNotas(){
+                    notas=[];
+                    for(let i=0; i<localStorage.length; i++){
+                        let key = localStorage.key(i)
+                        s[key]=localStorage.getItem(key)
+                        atualizarLista();
+                    }
+
+                }
+                carregarNotas();
+            </script>
+        </body>
+    </html>

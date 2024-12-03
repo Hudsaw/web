@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Hudson Borges</title>
+		<link rel="stylesheet" type="text/css" href="../style.css">
+        <style>
+            body{
+                height: 100vh;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            #btn{
+                height: 300px;
+                width: 400px;
+                font-size: 40px;
+            }
+        </style>
+	</head>
+    <body onload="startTime()">
+        <h2 id="txt">Aguarde...</h2>
+        <script>
+            function startTime() {
+              const today = new Date();
+              let h = today.getHours();
+              let m = today.getMinutes();
+              let s = today.getSeconds();
+              m = checkTime(m);
+              s = checkTime(s);
+              document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+              setTimeout(startTime, 1000);
+            }
+            
+            function checkTime(i) {
+              if (i < 10) {i = "0" + i};
+              return i;
+            }
+            </script>
+    </body>
+</html>

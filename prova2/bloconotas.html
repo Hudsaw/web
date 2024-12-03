@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Hudson Borges</title>
+		<link rel="stylesheet" type="text/css" href="../style.css">
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                min-height: 100vh;
+            }
+            #tecla{
+                word-wrap: break-word;
+                height: 80vh;
+                width: 90%;
+                font-size: 40px;
+                padding: 10px;
+                overflow-y: scroll;
+                white-space: pre-wrap;
+            }
+        </style>
+        </head>
+        <body>
+            <div id="tecla"></div>
+        
+            <script>
+                let divTeclas = document.getElementById("tecla");
+        
+                document.addEventListener("keydown", (e) => {
+                    if (e.key === "Shift" || e.key === "Control" || e.key === "Alt" || e.key === "CapsLock" || e.key === "Meta") {
+                        return;
+                    }   
+                    if (e.key === "Backspace") {
+                        divTeclas.innerHTML = divTeclas.innerHTML.slice(0, -1);
+                    }
+                    else if (e.key === "Enter") {
+                        divTeclas.innerHTML += "\n";
+                    }
+                    else if (e.key === "Tab") {
+                        divTeclas.innerHTML += "    ";
+                    }
+                    else if (e.key === "Delete") {
+                        divTeclas.innerHTML = divTeclas.innerHTML.slice(0, -1);
+                    }else {
+                        divTeclas.innerHTML += e.key;
+                    }
+                });
+            </script>
+        </body>
+    </html>

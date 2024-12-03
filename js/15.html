@@ -7,27 +7,30 @@
 		<link rel="stylesheet" type="text/css" href="../style.css">
         <style>
             body{
-                height: 100vh;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                min-height: 100vh;
             }
-            #teclas{
+            #tecla{
+                word-wrap: break-word;
                 height: 50px;
-                width: 400px;
+                width: 100svw;
                 font-size: 40px;
             }
         </style>
         </head>
         <body>
-            <div id="teclas"></div>
+            <p id="tecla"></p>
         
             <script>
-                const divTeclas = document.getElementById("teclas");
+                let divTeclas = document.getElementById("#tecla");
         
-                document.addEventListener("keydown", function(event) {
-                    const tecla = document.createElement("div");
-                    tecla.classList.add("tecla");
-                    tecla.textContent = event.key;
-        
-                    divTeclas.appendChild(tecla);
+                document.addEventListener("keydown", (e) => {
+                    e;
+                    evento = e;
+                    console.log(e.keyCode);
+                    tecla.innerHTML+=e.key;
                 });
             </script>
         </body>
