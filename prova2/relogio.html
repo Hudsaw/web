@@ -10,7 +10,7 @@
                 height: 100vh;
                 display:flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: space-evenly;
                 align-items: center;
             }
             #btn{
@@ -21,16 +21,30 @@
         </style>
 	</head>
     <body onload="startTime()">
-        <h2 id="txt">Aguarde...</h2>
+        <h2 id="hora">Aguarde...</h2>
+        <button id="iniciar">Iniciar</button>
+        <p id="crono">Aguarde...</p>
+
         <script>
+            let btninicio = document.querySelector("#iniciar");
+            let p=document.querySelector("crono");
+            let i=0;
+            setInterval(() => {
+               p.interval=i;
+               i++; 
+            }, 1000);
+            let agora;
+            let run = true;
+            let intervalo;
+
             function startTime() {
-              const today = new Date();
-              let h = today.getHours();
-              let m = today.getMinutes();
-              let s = today.getSeconds();
+              let agora = new Date();
+              let h = agora.getHours();
+              let m = agora.getMinutes();
+              let s = agora.getSeconds();
               m = checkTime(m);
               s = checkTime(s);
-              document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+              document.getElementById('hora').innerHTML =  h + ":" + m + ":" + s;
               setTimeout(startTime, 1000);
             }
             
@@ -38,6 +52,17 @@
               if (i < 10) {i = "0" + i};
               return i;
             }
-            </script>
+
+            document.addEventListener("keydown",()=>{
+                if(run){
+                    intervalo = setInterval(atualizaRelogio, 1);
+                    run = false;
+                } else{
+                    clearInterval(intervalo);
+                    run = true;
+                }
+            });
+            
+        </script>
     </body>
 </html>

@@ -42,7 +42,7 @@
                 let btnsalvar = document.querySelector("#salvar");
                 let btnconsulta = document.querySelector("#consulta");
                 let lista = document.querySelector("ul");
-                let contador = 0;
+                let notas = [];
 
                 btnsalvar.addEventListener("click", () => {
                     notas.push(inputnotas.value);
@@ -51,13 +51,13 @@
                 })
                 function atualizarLista(){
                     lista.innerHTML="";
-                    notas.forEach(nota,index) => {
+                    notas.forEach((nota,index) => {
                         let li=document.createElement("li");
                         li.innerText = nota;
                         lista.appendChild(li);
                         inputnota.value="";    
                     }
-                };
+                );}
 
                 function carregarNotas(){
                     notas=[];
@@ -66,7 +66,6 @@
                         s[key]=localStorage.getItem(key)
                         atualizarLista();
                     }
-
                 }
                 carregarNotas();
             </script>
