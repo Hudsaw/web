@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>AJAX</title>
+</head>
+<body>
+    <h2 id="status"></h2>
+    <div id="pessoas"></div>
+
+    <script>
+        fetch("https://api.chucknorris.io/jokes/random")
+        .then(response => response.json())
+        .then(data=>{
+            document.getElementById("pessoas").innerHTML = `
+                <h4>Piada do Chuck Norris:</h4>
+                <img id="icon" src="${data.icon_url}">
+                <h4>${data.value}</h4>
+            `;
+                    
+        })
+    </script>
+    
+</body>
+</html>

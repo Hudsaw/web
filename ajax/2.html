@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>AJAX</title>
+</head>
+<body>
+    <h2 id="status"></h2>
+    <div id="pessoas"></div>
+
+    <script>
+        fetch("pessoas.json")
+        .then(response => {
+            if (!response.ok) { 
+                throw new Error("Arquivo não encontrado (erro 404): " + response.status);
+            }
+            return response.json();
+        })
+        .then(data=>{
+            let pessoasDiv = document.getElementById("pessoas");
+            for (let i = 0; i < data.length; i++) {
+                pessoasDiv.innerHTML += `
+                    <div style="border:1px solid #FFC107">
+                        <h4> Nome: ${data[i].nome}</h4>
+                        <h4> Idade: ${data[i].idade}</h4>
+                        <h4> Profissão: ${data[i].profissao}</h4>
+                        <h4> Salário: ${data[i].salario}</h4>
+                    </div>
+                `;
+                }
+        })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>AJAX</title>
+</head>
+<body>
+    
+    <input type="text" id="key" placeholder="Digite o nome do filme">
+    <button onclick="buscarFilmes()">Buscar</button>
+    <div class="filmes" id="filmes"></div>
+
+    <script>
+        const apikey = "f77bfada";
+
+        function buscarFilmes() {
+            const searchTerm = document.getElementById("key").value;
+            const url = `https://www.omdbapi.com/?s=${searchTerm}&apikey=${apikey}`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    let filmesDiv = document.getElementById("filmes");
+                    filmesDiv.innerHTML = '';
+                    if (data.Search) {
+                        data.Search.forEach(movie => {
+                            filmesDiv.innerHTML += `
+                                <div style="border:1px solid #FFC107; margin: 10px; padding: 10px;">
+                                    <h4>Filme:</h4>
+                                    <img id="icon" src="${movie.Poster}" alt="Poster do Filme" style="max-width: 100px;">
+                                    <h4>Nome: ${movie.Title}</h4>
+                                    <p>Ano: ${movie.Year}</p>
+                                    <p>Gênero: ${movie.Type}</p>
+                                </div>        
+                            `;
+                        });
+                    } else {
+                        filmesDiv.innerHTML = "<p>Nenhum filme encontrado.</p>";
+                    }
+                });
+        }
+    </script>
+    
+</body>
+</html>
