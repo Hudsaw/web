@@ -91,7 +91,7 @@ ca<!DOCTYPE html>
             let diferenca = Math.floor((agora - tempoInicial) / 1000);
             let horas = Math.floor(diferenca / 3600);
             let minutos = Math.floor((diferenca % 3600) / 60);
-            let seg = difereca % 60;
+            let seg = diferenca % 60;
 
             cronometro.innerText =
                 `${String(horas).padStart(2, '0')}:${String(minutos).padStart(2, '0')}:${String(seg).padStart(2, '0')}`;
