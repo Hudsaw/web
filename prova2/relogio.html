@@ -67,7 +67,7 @@
         let iniciarBtn = document.getElementById("iniciar");
         let pausarBtn = document.getElementById("pausar");
         let resetarBtn = document.getElementById("resetar");
-        let segundos = 0;
+        let tempoInicial;
         let intervalo;
 
         function startTime() {
@@ -87,7 +87,8 @@
         }
 
         function atualizarCronometro() {
-            segundos++;
+            let agora = new Date();
+            let diferenca = Math.floor((agora - tempoInicial) / 1000);
             let horas = Math.floor(segundos / 3600);
             let minutos = Math.floor((segundos % 3600) / 60);
             let seg = segundos % 60;
@@ -97,6 +98,7 @@
         }
 
         iniciarBtn.addEventListener("click", () => {
+            tempoInicial = new Date();
             intervalo = setInterval(atualizarCronometro, 1000);
             iniciarBtn.disabled = true;
             pausarBtn.disabled = false;
@@ -111,7 +113,6 @@
 
         resetarBtn.addEventListener("click", () => {
             clearInterval(intervalo);
-            segundos = 0;
             cronometro.innerText = "00:00:00";
             iniciarBtn.disabled = false;
             pausarBtn.disabled = true;
